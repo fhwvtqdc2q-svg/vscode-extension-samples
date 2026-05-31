@@ -8,14 +8,16 @@ This is the source code for the [Language Configuration Guide](https://code.visu
 - Autosurrounding
 - Folding
 - Word pattern
-- Indentation Rules
+- Indentation rules
 
-## VS Code API
+## `language-configuration.json` schema
 
-### Contribution Points
+The `comments.lineComment` property is valid per the [language configuration guide](https://code.visualstudio.com/api/language-extensions/language-configuration-guide#comment-actions). If VS Code shows `Incorrect type. Expected "object"` on `lineComment`, that is a schema validation bug in the editor rather than an error in this file.
 
-- [`contributes.languages`](https://code.visualstudio.com/api/references/contribution-points#contributes.languages)
+The authoritative shape is documented in the guide above. VS Code loads this file at runtime via `contributes.languages[].configuration` in `package.json`.
 
-## Running the Sample
+## Try it
 
-- Run the `Run Extension` target in the Debug View
+- Open this folder in VS Code
+- Open any `.js` file
+- Toggle line comments with `Ctrl+/` / `Cmd+/`
