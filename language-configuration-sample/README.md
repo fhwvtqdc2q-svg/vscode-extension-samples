@@ -16,6 +16,8 @@ The `comments.lineComment` property is valid per the [language configuration gui
 
 The authoritative shape is documented in the guide above. VS Code loads this file at runtime via `contributes.languages[].configuration` in `package.json`.
 
+The `indentationRules` use standard JavaScript patterns: `increaseIndentPattern` matches lines ending with an unclosed `{`, `(`, or `[`; `decreaseIndentPattern` matches lines that begin with or consist of a closing `}` or `]`.
+
 ## Try it
 
 - Open this folder in VS Code
